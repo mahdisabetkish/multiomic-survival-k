@@ -1,0 +1,7 @@
+{
+  "attempted": true,
+  "replicated": false,
+  "reason": "TCGA PanCanAtlas curated clinical export used here has no ER/PR/HER2 receptor status field and no structured adjuvant-chemotherapy indicator, so the ER+/chemotherapy causal contrast from stage 07 cannot be replicated on this cohort without an unreliable proxy. Consistent with the study protocol's own expectation that TCGA treatment-effect replication is often limited.",
+  "has_er_status_field": true,
+  "has_chemo_flag_field": false
+}

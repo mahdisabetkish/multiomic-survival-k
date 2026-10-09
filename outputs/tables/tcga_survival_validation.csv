@@ -1,0 +1,2 @@
+n_patients,n_clusters,logrank_p,c_index_cluster_only
+1068,4,0.20482574834326492,0.573510875537313

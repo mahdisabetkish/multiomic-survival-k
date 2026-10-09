@@ -1,0 +1,29 @@
+2026-10-03 17:54:42,700 [INFO] 22_fixed_k_control: Gene set 'hallmark': 50 raw terms -> 50 after size filter/subsample
+2026-10-03 17:54:42,705 [INFO] 22_fixed_k_control: Gene set 'kegg': 320 raw terms -> 150 after size filter/subsample
+2026-10-03 17:54:42,725 [INFO] 22_fixed_k_control: Gene set 'reactome': 1816 raw terms -> 150 after size filter/subsample
+2026-10-03 17:57:52,200 [INFO] 22_fixed_k_control: Split  1: chosen k 6 in 2-8 (stage 20: 6, C-index reproduced), 14 in 2-15 | test C-index at chosen k 0.599, mean over 2-8 0.584, best 0.599 at k=6
+2026-10-03 18:00:38,378 [INFO] 22_fixed_k_control: Split  2: chosen k 7 in 2-8 (stage 20: 7, C-index reproduced), 15 in 2-15 | test C-index at chosen k 0.570, mean over 2-8 0.554, best 0.570 at k=7
+2026-10-03 18:03:33,460 [INFO] 22_fixed_k_control: Split  3: chosen k 5 in 2-8 (stage 20: 5, C-index reproduced), 15 in 2-15 | test C-index at chosen k 0.564, mean over 2-8 0.556, best 0.570 at k=7
+2026-10-03 18:06:17,172 [INFO] 22_fixed_k_control: Split  4: chosen k 5 in 2-8 (stage 20: 5, C-index reproduced), 10 in 2-15 | test C-index at chosen k 0.540, mean over 2-8 0.533, best 0.545 at k=8
+2026-10-03 18:09:18,232 [INFO] 22_fixed_k_control: Split  5: chosen k 5 in 2-8 (stage 20: 5, C-index reproduced), 5 in 2-15 | test C-index at chosen k 0.586, mean over 2-8 0.576, best 0.586 at k=7
+2026-10-03 18:11:59,892 [INFO] 22_fixed_k_control: Split  6: chosen k 8 in 2-8 (stage 20: 8, C-index reproduced), 8 in 2-15 | test C-index at chosen k 0.541, mean over 2-8 0.560, best 0.586 at k=4
+2026-10-03 18:14:51,565 [INFO] 22_fixed_k_control: Split  7: chosen k 4 in 2-8 (stage 20: 4, C-index reproduced), 4 in 2-15 | test C-index at chosen k 0.562, mean over 2-8 0.558, best 0.567 at k=7
+2026-10-03 18:17:47,242 [INFO] 22_fixed_k_control: Split  8: chosen k 4 in 2-8 (stage 20: 4, C-index reproduced), 4 in 2-15 | test C-index at chosen k 0.558, mean over 2-8 0.551, best 0.558 at k=4
+2026-10-03 18:20:50,131 [INFO] 22_fixed_k_control: Split  9: chosen k 8 in 2-8 (stage 20: 8, C-index reproduced), 8 in 2-15 | test C-index at chosen k 0.571, mean over 2-8 0.557, best 0.571 at k=8
+2026-10-03 18:23:31,714 [INFO] 22_fixed_k_control: Split 10: chosen k 7 in 2-8 (stage 20: 7, C-index reproduced), 12 in 2-15 | test C-index at chosen k 0.558, mean over 2-8 0.545, best 0.558 at k=7
+2026-10-03 18:23:31,844 [INFO] 22_fixed_k_control: 
+2026-10-03 18:23:31,845 [INFO] 22_fixed_k_control: Mean held-out C-index by fixed k: 2: 0.549, 3: 0.546, 4: 0.561, 5: 0.564, 6: 0.557, 7: 0.565, 8: 0.560, 9: 0.561, 10: 0.565, 11: 0.555, 12: 0.557, 13: 0.556, 14: 0.552, 15: 0.559
+2026-10-03 18:23:31,845 [INFO] 22_fixed_k_control: Chosen k (2-8): [6, 7, 5, 5, 5, 8, 4, 4, 8, 7]; chosen k (2-15): [14, 15, 15, 10, 5, 8, 4, 4, 8, 12]
+2026-10-03 18:23:31,845 [INFO] 22_fixed_k_control: Survival-guided 0.565 | uniform k 0.557 | oracle 0.571 | wide search 0.561
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: Rank of the chosen k among the 7 candidates (1 = best on held-out data): [1, 1, 2, 2, 2, 7, 3, 1, 1, 1]
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: Spearman correlation of S(k) with held-out C-index over 2-8, per split: [0.75, 0.39, 0.5, 0.21, -0.21, -0.89, -0.11, 0.36, 0.21, 0.54] (mean 0.18)
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs fixed k = 2                                 diff +0.0155, better in 9/10, corrected p 0.042
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs fixed k = 3                                 diff +0.0191, better in 9/10, corrected p 0.114
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs fixed k = 4                                 diff +0.0038, better in 7/10, corrected p 0.801
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs fixed k = 5                                 diff +0.0011, better in 6/10, corrected p 0.909
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs fixed k = 6                                 diff +0.0082, better in 8/10, corrected p 0.390
+2026-10-03 18:23:31,846 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs fixed k = 7                                 diff +0.0002, better in 4/10, corrected p 0.981
+2026-10-03 18:23:31,847 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs fixed k = 8                                 diff +0.0045, better in 6/10, corrected p 0.504
+2026-10-03 18:23:31,847 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs k uniform on 2-8                            diff +0.0075, better in 9/10, corrected p 0.337
+2026-10-03 18:23:31,847 [INFO] 22_fixed_k_control: survival-guided k (2-8) vs survival-guided k, searched 2-15            diff +0.0036, better in 4/10, corrected p 0.717
+2026-10-03 18:23:31,847 [INFO] 22_fixed_k_control: Stage 22 complete.

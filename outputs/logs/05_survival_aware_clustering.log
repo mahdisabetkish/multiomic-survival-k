@@ -1,0 +1,23 @@
+2026-09-17 16:00:07,944 [INFO] 05_survival_aware_clustering: Searching k in [2, 8] with 5 inner repeats, primary metric=logrank_p (also recording ['cindex_diff'])
+2026-09-17 16:00:08,979 [INFO] 05_survival_aware_clustering: k=2: mean logrank_p = 0.9322 (+/- 0.5049), mean cindex_diff = 0.5425 (+/- 0.0365)
+2026-09-17 16:00:10,269 [INFO] 05_survival_aware_clustering: k=3: mean logrank_p = 1.1745 (+/- 0.3075), mean cindex_diff = 0.5675 (+/- 0.0108)
+2026-09-17 16:00:11,649 [INFO] 05_survival_aware_clustering: k=4: mean logrank_p = 1.6966 (+/- 0.7712), mean cindex_diff = 0.5715 (+/- 0.0158)
+2026-09-17 16:00:13,267 [INFO] 05_survival_aware_clustering: k=5: mean logrank_p = 0.7054 (+/- 0.1737), mean cindex_diff = 0.5643 (+/- 0.0086)
+2026-09-17 16:00:14,975 [INFO] 05_survival_aware_clustering: k=6: mean logrank_p = 1.6673 (+/- 0.4578), mean cindex_diff = 0.5840 (+/- 0.0247)
+2026-09-17 16:00:17,143 [INFO] 05_survival_aware_clustering: k=7: mean logrank_p = 1.3451 (+/- 0.6076), mean cindex_diff = 0.5709 (+/- 0.0111)
+2026-09-17 16:00:18,792 [INFO] 05_survival_aware_clustering: k=8: mean logrank_p = 1.4152 (+/- 0.8799), mean cindex_diff = 0.5825 (+/- 0.0297)
+2026-09-17 16:00:18,795 [INFO] 05_survival_aware_clustering: Selected k* = 4 (best mean logrank_p)
+2026-09-17 16:00:18,796 [INFO] 05_survival_aware_clustering: For reference, the cindex_diff criterion would have selected k = 6
+2026-09-17 16:00:18,964 [INFO] 05_survival_aware_clustering: Train cluster sizes:
+cluster
+0    220
+1    350
+2    383
+3    349
+2026-09-17 16:00:18,965 [INFO] 05_survival_aware_clustering: Test cluster sizes:
+cluster
+0     89
+1    152
+2    166
+3    151
+2026-09-17 16:00:18,965 [INFO] 05_survival_aware_clustering: Stage 05 complete.

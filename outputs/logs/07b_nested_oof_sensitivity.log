@@ -1,0 +1,44 @@
+2026-09-28 11:28:42,337 [INFO] 07b_nested_oof_sensitivity: Fold 1/5: refitting scalers and MOFA on 1041 patients, projecting 261
+2026-09-28 11:30:20,144 [INFO] 07b_nested_oof_sensitivity: Fold 1: MOFA kept 11 factors, k*=5 (k differs from reference)
+2026-09-28 11:30:20,145 [INFO] 07b_nested_oof_sensitivity: Fold 2/5: refitting scalers and MOFA on 1041 patients, projecting 261
+2026-09-28 11:31:34,308 [INFO] 07b_nested_oof_sensitivity: Fold 2: MOFA kept 11 factors, k*=6 (k differs from reference)
+2026-09-28 11:31:34,308 [INFO] 07b_nested_oof_sensitivity: Fold 3/5: refitting scalers and MOFA on 1042 patients, projecting 260
+2026-09-28 11:32:39,870 [INFO] 07b_nested_oof_sensitivity: Fold 3: MOFA kept 10 factors, k*=2 (k differs from reference)
+2026-09-28 11:32:39,871 [INFO] 07b_nested_oof_sensitivity: Fold 4/5: refitting scalers and MOFA on 1042 patients, projecting 260
+2026-09-28 11:33:53,019 [INFO] 07b_nested_oof_sensitivity: Fold 4: MOFA kept 11 factors, k*=5 (k differs from reference)
+2026-09-28 11:33:53,019 [INFO] 07b_nested_oof_sensitivity: Fold 5/5: refitting scalers and MOFA on 1042 patients, projecting 260
+2026-09-28 11:35:10,739 [INFO] 07b_nested_oof_sensitivity: Fold 5: MOFA kept 11 factors, k*=5 (k differs from reference)
+2026-09-28 11:35:10,781 [INFO] 07b_nested_oof_sensitivity: Fully nested labels vs stage 07 out-of-fold labels: ARI=0.373, agreement=70.2%
+2026-09-28 11:35:10,781 [INFO] 07b_nested_oof_sensitivity: Fully nested labels vs reference training labels:   ARI=0.461
+2026-09-28 11:35:10,786 [INFO] 07b_nested_oof_sensitivity: Repeating the causal analysis on 980 ER-positive training patients
+2026-09-28 11:35:10,790 [INFO] 07b_nested_oof_sensitivity: === Causal analysis_nested: n=980, treated=82, clusters={0: 104, 1: 233, 2: 276, 3: 367} ===
+2026-09-28 11:35:10,936 [INFO] 07b_nested_oof_sensitivity: Propensity score range: [0.001, 0.881]; weight range after trim: [0.123, 2.391]
+2026-09-28 11:35:10,942 [INFO] 07b_nested_oof_sensitivity: Covariate balance (max |SMD|): before=0.907, after=0.478
+2026-09-28 11:35:10,945 [INFO] 07b_nested_oof_sensitivity: Covariate balance table:
+                    covariate  smd_before_weighting  smd_after_weighting
+             AGE_AT_DIAGNOSIS             -0.906974            -0.072785
+                        GRADE              0.495530             0.225768
+                   TUMOR_SIZE              0.421820             0.069018
+                  TUMOR_STAGE              0.685464             0.478144
+LYMPH_NODES_EXAMINED_POSITIVE              0.547128             0.353331
+               HER2_SNP6_LOSS             -0.059126            -0.020344
+            HER2_SNP6_NEUTRAL             -0.133405            -0.110691
+              HER2_SNP6_UNDEF             -0.094544            -0.100368
+INFERRED_MENOPAUSAL_STATE_Pre              0.598386            -0.011409
+          HORMONE_THERAPY_YES              0.631710             0.468863
+            RADIO_THERAPY_YES              0.576899             0.207020
+2026-09-28 11:35:11,532 [INFO] 07b_nested_oof_sensitivity: Effect-modification LRT: stat=0.972, df=3, p=0.808
+2026-09-28 11:35:11,542 [INFO] 07b_nested_oof_sensitivity: Cluster-specific chemotherapy HRs (IPTW-weighted Cox):
+ cluster  is_reference_cluster  hazard_ratio  ci_lower  ci_upper  p_value  e_value  n_treated  n_control
+       0                  True      1.929837  1.180194  3.155641 0.008784 3.269401         18         86
+       1                 False      1.973836  1.080503  3.605756 0.026977 3.360268         23        210
+       2                 False      1.177709  0.394943  3.511891 0.769192 1.635190         17        259
+       3                 False      1.695876  0.977852  2.941136 0.060071 2.782209         24        343
+2026-09-28 11:35:11,543 [INFO] 07b_nested_oof_sensitivity: Computing jackknife RMST pseudo-observations at horizon=120 months (n=980) ...
+2026-09-28 11:35:31,332 [INFO] 07b_nested_oof_sensitivity: Causal forest CATE (RMST months gained from chemo) by cluster:
+ cluster  cate_rmst_months   ci_lower  ci_upper
+       0        -24.101161 -43.794922 -4.407400
+       1          1.184551 -14.279046 16.648148
+       2          2.719183 -12.341806 17.780173
+       3         -6.781071 -20.046024  6.483881
+2026-09-28 11:35:31,333 [INFO] 07b_nested_oof_sensitivity: Stage 07b complete.

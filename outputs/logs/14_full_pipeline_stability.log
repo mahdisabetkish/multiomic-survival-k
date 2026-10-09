@@ -1,0 +1,15 @@
+2026-10-02 11:00:02,212 [INFO] 14_full_pipeline_stability: Run  1/10: MOFA kept 12 factors, k selected = 7, ARI unconditional = 0.451, ARI conditional on k=4 = 0.641
+2026-10-02 11:01:54,709 [INFO] 14_full_pipeline_stability: Run  2/10: MOFA kept 11 factors, k selected = 6, ARI unconditional = 0.478, ARI conditional on k=4 = 0.787
+2026-10-02 11:03:50,398 [INFO] 14_full_pipeline_stability: Run  3/10: MOFA kept 11 factors, k selected = 3, ARI unconditional = 0.518, ARI conditional on k=4 = 0.680
+2026-10-02 11:05:09,281 [INFO] 14_full_pipeline_stability: Run  4/10: MOFA kept 10 factors, k selected = 2, ARI unconditional = 0.264, ARI conditional on k=4 = 0.682
+2026-10-02 11:06:31,997 [INFO] 14_full_pipeline_stability: Run  5/10: MOFA kept 11 factors, k selected = 7, ARI unconditional = 0.505, ARI conditional on k=4 = 0.583
+2026-10-02 11:07:50,525 [INFO] 14_full_pipeline_stability: Run  6/10: MOFA kept 12 factors, k selected = 6, ARI unconditional = 0.508, ARI conditional on k=4 = 0.887
+2026-10-02 11:08:53,884 [INFO] 14_full_pipeline_stability: Run  7/10: MOFA kept 11 factors, k selected = 8, ARI unconditional = 0.481, ARI conditional on k=4 = 0.734
+2026-10-02 11:10:01,219 [INFO] 14_full_pipeline_stability: Run  8/10: MOFA kept 10 factors, k selected = 4, ARI unconditional = 0.742, ARI conditional on k=4 = 0.742
+2026-10-02 11:11:22,984 [INFO] 14_full_pipeline_stability: Run  9/10: MOFA kept 12 factors, k selected = 4, ARI unconditional = 0.571, ARI conditional on k=4 = 0.571
+2026-10-02 11:12:34,295 [INFO] 14_full_pipeline_stability: Run 10/10: MOFA kept 11 factors, k selected = 7, ARI unconditional = 0.376, ARI conditional on k=4 = 0.663
+2026-10-02 11:12:34,298 [INFO] 14_full_pipeline_stability: k selected across runs: [7, 6, 3, 2, 7, 6, 8, 4, 4, 7]
+2026-10-02 11:12:34,299 [INFO] 14_full_pipeline_stability: Reference k was selected in 2 of 10 runs
+2026-10-02 11:12:34,299 [INFO] 14_full_pipeline_stability: Mean ARI, k reselected    : 0.489 (range 0.264 to 0.742)
+2026-10-02 11:12:34,299 [INFO] 14_full_pipeline_stability: Mean ARI, k fixed at 4    : 0.697 (range 0.571 to 0.887)
+2026-10-02 11:12:34,299 [INFO] 14_full_pipeline_stability: Stage 14 complete.

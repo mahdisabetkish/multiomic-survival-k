@@ -1,0 +1,5 @@
+variant,k,c_index_test,logrank_p_test
+Full SAMOC (pathway agg. + MOFA + survival-aware k),4,0.5607167387551282,0.004678256321714476
+No survival-aware clustering (unsupervised k),2,0.5587954110898662,0.001951749502593749
+No MOFA (raw concatenated pathway features + survival-aware k),4,0.5342451131448513,0.13621013075786664
+No pathway aggregation (raw top-2000-variance genes + MOFA + survival-aware k),7,0.5235664296719821,0.025531622454749502

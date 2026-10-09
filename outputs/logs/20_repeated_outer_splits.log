@@ -1,0 +1,50 @@
+2026-10-03 16:31:47,200 [INFO] 20_repeated_outer_splits: Gene set 'hallmark': 50 raw terms -> 50 after size filter/subsample
+2026-10-03 16:31:47,206 [INFO] 20_repeated_outer_splits: Gene set 'kegg': 320 raw terms -> 150 after size filter/subsample
+2026-10-03 16:31:47,224 [INFO] 20_repeated_outer_splits: Gene set 'reactome': 1816 raw terms -> 150 after size filter/subsample
+2026-10-03 16:40:22,067 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 16:40:22,219 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'pam50' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 16:40:22,504 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'cluster_plus_clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 16:40:22,504 [INFO] 20_repeated_outer_splits: Split  1/10: k=6 (silhouette 2, no-MOFA 6) | C-index survival-k 0.599, silhouette 0.565, no-MOFA 0.543, SNF 0.608, NEMO 0.571, CIMLR 0.539, iCluster 0.542, clinical 0.657
+2026-10-03 16:50:29,305 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'clinical' (time must be smaller than largest observed time point: 335.6)
+2026-10-03 16:50:29,456 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'pam50' (time must be smaller than largest observed time point: 335.6)
+2026-10-03 16:50:29,724 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'cluster_plus_clinical' (time must be smaller than largest observed time point: 335.6)
+2026-10-03 16:50:29,724 [INFO] 20_repeated_outer_splits: Split  2/10: k=7 (silhouette 2, no-MOFA 3) | C-index survival-k 0.570, silhouette 0.553, no-MOFA 0.542, SNF 0.530, NEMO 0.545, CIMLR 0.519, iCluster 0.511, clinical 0.665
+2026-10-03 17:01:57,774 [INFO] 20_repeated_outer_splits: Split  3/10: k=5 (silhouette 2, no-MOFA 5) | C-index survival-k 0.564, silhouette 0.547, no-MOFA 0.551, SNF 0.571, NEMO 0.573, CIMLR 0.565, iCluster 0.546, clinical 0.668
+2026-10-03 17:09:56,073 [INFO] 20_repeated_outer_splits: Split  4/10: k=5 (silhouette 2, no-MOFA 8) | C-index survival-k 0.540, silhouette 0.533, no-MOFA 0.524, SNF 0.520, NEMO 0.547, CIMLR 0.535, iCluster 0.532, clinical 0.660
+2026-10-03 17:17:01,686 [INFO] 20_repeated_outer_splits: Split  5/10: k=5 (silhouette 2, no-MOFA 5) | C-index survival-k 0.586, silhouette 0.569, no-MOFA 0.565, SNF 0.552, NEMO 0.579, CIMLR 0.570, iCluster 0.563, clinical 0.667
+2026-10-03 17:24:25,849 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:24:26,023 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'pam50' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:24:26,345 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'cluster_plus_clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:24:26,345 [INFO] 20_repeated_outer_splits: Split  6/10: k=8 (silhouette 2, no-MOFA 6) | C-index survival-k 0.541, silhouette 0.543, no-MOFA 0.543, SNF 0.531, NEMO 0.555, CIMLR 0.540, iCluster 0.554, clinical 0.659
+2026-10-03 17:31:58,540 [INFO] 20_repeated_outer_splits: Split  7/10: k=4 (silhouette 2, no-MOFA 8) | C-index survival-k 0.562, silhouette 0.543, no-MOFA 0.555, SNF 0.546, NEMO 0.555, CIMLR 0.539, iCluster 0.554, clinical 0.671
+2026-10-03 17:37:49,037 [INFO] 20_repeated_outer_splits: Split  8/10: k=4 (silhouette 2, no-MOFA 4) | C-index survival-k 0.558, silhouette 0.542, no-MOFA 0.541, SNF 0.551, NEMO 0.573, CIMLR 0.545, iCluster 0.531, clinical 0.658
+2026-10-03 17:43:42,605 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:43:42,750 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'pam50' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:43:42,991 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'cluster_plus_clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:43:42,992 [INFO] 20_repeated_outer_splits: Split  9/10: k=8 (silhouette 2, no-MOFA 4) | C-index survival-k 0.571, silhouette 0.558, no-MOFA 0.524, SNF 0.578, NEMO 0.550, CIMLR 0.563, iCluster 0.549, clinical 0.671
+2026-10-03 17:49:11,665 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:49:11,805 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'pam50' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:49:12,044 [WARNING] 20_repeated_outer_splits: Time-dependent AUC failed for 'cluster_plus_clinical' (time must be smaller than largest observed time point: 351.0)
+2026-10-03 17:49:12,044 [INFO] 20_repeated_outer_splits: Split 10/10: k=7 (silhouette 2, no-MOFA 2) | C-index survival-k 0.558, silhouette 0.539, no-MOFA 0.535, SNF 0.555, NEMO 0.541, CIMLR 0.546, iCluster 0.552, clinical 0.665
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: 
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: k selected by the survival criterion across splits: [6, 7, 5, 5, 5, 8, 4, 4, 8, 7]
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: Survival-guided k (evaluated pipeline)     mean C-index 0.565 (sd 0.018, range 0.540-0.599)
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: Silhouette-selected k                      mean C-index 0.549 (sd 0.012, range 0.533-0.569)
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: Survival-guided k, no MOFA                 mean C-index 0.542 (sd 0.013, range 0.524-0.565)
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: SNF                                        mean C-index 0.554 (sd 0.026, range 0.520-0.608)
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: NEMO approximation                         mean C-index 0.559 (sd 0.014, range 0.541-0.579)
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: CIMLR approximation                        mean C-index 0.546 (sd 0.016, range 0.519-0.570)
+2026-10-03 17:49:12,194 [INFO] 20_repeated_outer_splits: iClusterPlus approximation                 mean C-index 0.543 (sd 0.015, range 0.511-0.563)
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: PAM50 surrogate                            mean C-index 0.572 (sd 0.012, range 0.555-0.592)
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Clinical variables                         mean C-index 0.664 (sd 0.005, range 0.657-0.671)
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Clusters plus clinical                     mean C-index 0.667 (sd 0.006, range 0.658-0.675)
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs Silhouette-selected k                     diff +0.016, better in 9/10, corrected p 0.042
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs Survival-guided k, no MOFA                diff +0.022, better in 9/10, corrected p 0.109
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs SNF                                       diff +0.011, better in 7/10, corrected p 0.410
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs NEMO approximation                        diff +0.006, better in 6/10, corrected p 0.616
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs CIMLR approximation                       diff +0.019, better in 9/10, corrected p 0.242
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs iClusterPlus approximation                diff +0.022, better in 9/10, corrected p 0.216
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs PAM50 surrogate                           diff -0.007, better in 4/10, corrected p 0.550
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs Clinical variables                        diff -0.099, better in 0/10, corrected p 0.000
+2026-10-03 17:49:12,195 [INFO] 20_repeated_outer_splits: Survival-guided k vs Clusters plus clinical                    diff -0.102, better in 0/10, corrected p 0.000
+2026-10-03 17:49:12,196 [INFO] 20_repeated_outer_splits: Stage 20 complete.

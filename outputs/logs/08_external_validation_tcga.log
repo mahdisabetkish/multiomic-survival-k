@@ -1,0 +1,24 @@
+2026-08-07 18:39:49,852 [INFO] 08_external_validation_tcga: Loading TCGA mRNA (RSEM) and CNA matrices ...
+2026-08-07 18:40:18,654 [INFO] 08_external_validation_tcga: TCGA analysis cohort (mRNA + CNA + usable survival label): n=1068
+2026-08-07 18:40:19,435 [INFO] 08_external_validation_tcga: Gene set 'hallmark': 50 raw terms -> 50 after size filter/subsample
+2026-08-07 18:40:19,454 [INFO] 08_external_validation_tcga: Gene set 'kegg': 320 raw terms -> 150 after size filter/subsample
+2026-08-07 18:40:19,480 [INFO] 08_external_validation_tcga: Gene set 'reactome': 1816 raw terms -> 150 after size filter/subsample
+2026-08-07 18:40:39,107 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 1/8 complete
+2026-08-07 18:40:59,626 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 2/8 complete
+2026-08-07 18:41:20,950 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 3/8 complete
+2026-08-07 18:41:41,144 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 4/8 complete
+2026-08-07 18:42:03,656 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 5/8 complete
+2026-08-07 18:42:24,659 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 6/8 complete
+2026-08-07 18:42:46,624 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 7/8 complete
+2026-08-07 18:42:51,744 [INFO] 08_external_validation_tcga: TCGA ssGSEA batch 8/8 complete
+2026-08-07 18:43:00,208 [INFO] 08_external_validation_tcga: Projecting TCGA into MOFA space using views=['mrna_pathway', 'cna_pathway'] (mutation view unavailable for TCGA)
+2026-08-07 18:43:01,055 [INFO] 08_external_validation_tcga: TCGA prognostic validation: logrank_p=0.2048, c_index=0.5735
+2026-08-07 18:43:01,114 [INFO] 08_external_validation_tcga: Cluster proportions (METABRIC train vs TCGA):
+         metabric_train_proportion  tcga_proportion
+cluster                                            
+0                         0.168971         0.535581
+1                         0.268817         0.012172
+2                         0.294163         0.191948
+3                         0.268049         0.260300
+2026-08-07 18:43:01,213 [INFO] 08_external_validation_tcga: Treatment-effect replication: TCGA PanCanAtlas curated clinical export used here has no ER/PR/HER2 receptor status field and no structured adjuvant-chemotherapy indicator, so the ER+/chemotherapy causal contrast from stage 07 cannot be replicated on this cohort without an unreliable proxy. Consistent with the study protocol's own expectation that TCGA treatment-effect replication is often limited.
+2026-08-07 18:43:01,213 [INFO] 08_external_validation_tcga: Stage 08 complete.

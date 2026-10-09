@@ -1,0 +1,172 @@
+# =============================================================================
+# Central configuration for the survival-aware multi-omic clustering and
+# treatment-effect-heterogeneity pipeline (METABRIC / TCGA-BRCA).
+#
+# Every stage script (scripts/02_*.py ... scripts/10_*.py) reads this file via
+# --config and must not hardcode paths or hyperparameters. Authored manually
+# from the methodology described in the study protocol. Adjust freely; every run is stamped with the git commit hash that
+# produced it (see outputs/logs).
+# =============================================================================
+
+project:
+  name: "metabric_survival_multiomics"
+  random_seed: 42
+
+paths:
+  raw_metabric_dir: "data/raw/metabric"
+  raw_tcga_dir: "data/raw/tcga"
+  genesets_dir: "data/raw/genesets"
+  processed_metabric_dir: "data/processed/metabric"
+  processed_tcga_dir: "data/processed/tcga"
+  outputs_dir: "outputs"
+  logs_dir: "outputs/logs"
+  checkpoints_dir: "outputs/checkpoints"
+  figures_dir: "outputs/figures"
+  tables_dir: "outputs/tables"
+
+# -----------------------------------------------------------------------------
+# Stage 02: preprocessing raw omics layers
+# -----------------------------------------------------------------------------
+preprocess:
+  min_gene_variance_percentile: 50       # drop bottom half by variance before ssGSEA (also caps peak memory)
+  cna_call_levels: [-2, -1, 0, 1, 2]      # GISTIC-style discrete calls used in METABRIC data_cna.txt
+  mutation_min_recurrence: 10             # gene must be mutated in >= N patients to be kept individually
+  vital_status_col: "VITAL_STATUS"
+  os_time_col: "OS_MONTHS"
+  os_status_col: "OS_STATUS"
+  pam50_col: "CLAUDIN_SUBTYPE"            # closest available surrogate for PAM50 in METABRIC clinical file
+
+# -----------------------------------------------------------------------------
+# Stage 03: feature engineering / dimensionality reduction
+# -----------------------------------------------------------------------------
+feature_aggregation:
+  genesets:
+    - name: "hallmark"
+      source: "MSigDB_Hallmark_2020"      # fetched via Enrichr mirror (gseapy) - no MSigDB license gate
+      max_terms: null                      # keep all 50 Hallmark sets
+    - name: "kegg"
+      source: "KEGG_2021_Human"
+      max_terms: 150                       # reproducible seeded subsample of size-filtered sets, caps ssGSEA runtime
+    - name: "reactome"
+      source: "Reactome_2022"
+      max_terms: 150                       # Reactome has >1800 raw terms; subsampled to keep total features "a few hundred"
+  ssgsea:
+    min_geneset_size: 15
+    max_geneset_size: 300
+    sample_norm_method: "rank"
+    threads: 2
+    sample_batch_size: 150   # process samples in batches to bound peak memory on the 8GB host
+  cna:
+    arm_level: true                       # arm-level burden scores (chromosome arm mean call)
+    pathway_level: true                   # pathway-level CNA scores using same gene sets as mRNA
+  mutations:
+    recurrent_gene_list_top_n: 40         # most-recurrently-mutated genes binarised individually
+    include_tmb: true
+  clinical_covariates:
+    - AGE_AT_DIAGNOSIS
+    - GRADE
+    - ER_IHC
+    - HER2_SNP6
+    - PR_STATUS
+    - TUMOR_SIZE
+    - TUMOR_STAGE
+    - LYMPH_NODES_EXAMINED_POSITIVE
+    - CHEMOTHERAPY
+    - HORMONE_THERAPY
+    - RADIO_THERAPY
+    - INFERRED_MENOPAUSAL_STATE
+    - CLAUDIN_SUBTYPE
+
+# -----------------------------------------------------------------------------
+# Stage 04: leakage-free train/test split
+# -----------------------------------------------------------------------------
+split:
+  test_fraction: 0.30
+  stratify_on: ["VITAL_STATUS", "CLAUDIN_SUBTYPE"]
+  random_seed: 42
+
+# -----------------------------------------------------------------------------
+# Stage 05: MOFA multi-omic factorisation
+# -----------------------------------------------------------------------------
+mofa:
+  views: ["mrna_pathway", "cna_pathway", "mutation"]
+  n_factors_min: 10
+  n_factors_max: 15
+  n_factors_default: 15                   # upper bound used unless ELBO-based selection (drop_factor_threshold) prunes further
+  drop_factor_threshold: 0.005            # MOFA convergence: drop factors explaining < 0.5% variance in all views (tuned so retained K falls in [n_factors_min, n_factors_max] on this cohort)
+  convergence_mode: "medium"
+  max_iterations: 1000
+  scale_views: true
+  seed: 42
+
+# -----------------------------------------------------------------------------
+# Stage 06: survival-aware k-means clustering
+# -----------------------------------------------------------------------------
+clustering:
+  k_min: 2
+  k_max: 8
+  n_init_per_k: 50                        # random restarts of k-means per candidate k
+  inner_val_fraction: 0.25                # inner validation fold carved from training data
+  selection_metric: "logrank_p"           # one of: logrank_p, cindex_diff
+  n_inner_repeats: 5                      # repeat inner train/val split N times, average the metric
+  random_seed: 42
+
+# -----------------------------------------------------------------------------
+# Stage 07: cluster evaluation & stability
+# -----------------------------------------------------------------------------
+evaluation:
+  n_stability_subsamples: 10
+  subsample_fraction: 0.8
+  min_acceptable_mean_ari: 0.5
+  time_dependent_auc_horizons_months: [60, 120, 180]   # 5 / 10 / 15 year AUC
+
+# -----------------------------------------------------------------------------
+# Stage 08: causal treatment-effect heterogeneity
+# -----------------------------------------------------------------------------
+causal:
+  treatment_col: "CHEMOTHERAPY"
+  treatment_positive_value: "YES"
+  cohort_filter:
+    ER_IHC: "Positve"                      # ER+ chemotherapy contrast (note: source data spells it "Positve")
+  confounders:
+    - AGE_AT_DIAGNOSIS
+    - GRADE
+    - TUMOR_SIZE
+    - TUMOR_STAGE
+    - LYMPH_NODES_EXAMINED_POSITIVE
+    - HER2_SNP6
+    - INFERRED_MENOPAUSAL_STATE
+    - HORMONE_THERAPY
+    - RADIO_THERAPY
+  propensity_model: "logistic_regression"
+  weighting_method: "iptw"
+  iptw_stabilized: true
+  iptw_trim_percentile: [1, 99]
+  cox_interaction: true
+  causal_forest:
+    outcome_transform: "rmst"             # restricted-mean-survival-time pseudo-outcome fed into CausalForestDML
+    rmst_horizon_months: 120
+    n_estimators: 2000
+    min_samples_leaf: 10
+    random_seed: 42
+  evalue:
+    compute: true
+  alpha: 0.05
+  oof_n_folds: 5                          # outer folds for out-of-fold cluster labels (k chosen and centroids fit without the held-out fold)
+
+# -----------------------------------------------------------------------------
+# Stage 09/10: TCGA external validation
+# -----------------------------------------------------------------------------
+external_validation:
+  cohort: "tcga_brca"
+  project_using_saved_mofa_model: true
+  assign_using_saved_centroids: true
+  attempt_treatment_effect_replication: true
+
+# -----------------------------------------------------------------------------
+# Figures & tables
+# -----------------------------------------------------------------------------
+reporting:
+  figure_formats: ["png", "pdf"]
+  dpi: 300
+  color_palette: "colorblind"

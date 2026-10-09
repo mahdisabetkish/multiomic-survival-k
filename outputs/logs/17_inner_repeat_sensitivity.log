@@ -1,0 +1,15 @@
+2026-10-03 15:40:42,167 [INFO] 17_inner_repeat_sensitivity: Run  1/10: k = 3 (R=5), 3 (R=15), 3 (R=50)
+2026-10-03 15:43:43,783 [INFO] 17_inner_repeat_sensitivity: Run  2/10: k = 6 (R=5), 8 (R=15), 7 (R=50)
+2026-10-03 15:47:03,136 [INFO] 17_inner_repeat_sensitivity: Run  3/10: k = 3 (R=5), 3 (R=15), 3 (R=50)
+2026-10-03 15:50:18,012 [INFO] 17_inner_repeat_sensitivity: Run  4/10: k = 4 (R=5), 3 (R=15), 3 (R=50)
+2026-10-03 15:53:13,000 [INFO] 17_inner_repeat_sensitivity: Run  5/10: k = 8 (R=5), 8 (R=15), 8 (R=50)
+2026-10-03 15:56:17,584 [INFO] 17_inner_repeat_sensitivity: Run  6/10: k = 5 (R=5), 8 (R=15), 8 (R=50)
+2026-10-03 15:59:07,733 [INFO] 17_inner_repeat_sensitivity: Run  7/10: k = 8 (R=5), 8 (R=15), 8 (R=50)
+2026-10-03 16:02:04,533 [INFO] 17_inner_repeat_sensitivity: Run  8/10: k = 5 (R=5), 7 (R=15), 6 (R=50)
+2026-10-03 16:05:20,132 [INFO] 17_inner_repeat_sensitivity: Run  9/10: k = 8 (R=5), 7 (R=15), 7 (R=50)
+2026-10-03 16:08:16,216 [INFO] 17_inner_repeat_sensitivity: Run 10/10: k = 2 (R=5), 2 (R=15), 5 (R=50)
+2026-10-03 16:08:16,222 [INFO] 17_inner_repeat_sensitivity: 
+2026-10-03 16:08:16,222 [INFO] 17_inner_repeat_sensitivity: R= 5: k selected [2, 3, 3, 4, 5, 5, 6, 8, 8, 8] | distinct values 6 | mean winning margin 0.201, mean within-k spread 0.711
+2026-10-03 16:08:16,223 [INFO] 17_inner_repeat_sensitivity: R=15: k selected [2, 3, 3, 3, 7, 7, 8, 8, 8, 8] | distinct values 4 | mean winning margin 0.187, mean within-k spread 0.835
+2026-10-03 16:08:16,223 [INFO] 17_inner_repeat_sensitivity: R=50: k selected [3, 3, 3, 5, 6, 7, 7, 8, 8, 8] | distinct values 5 | mean winning margin 0.143, mean within-k spread 0.880
+2026-10-03 16:08:16,223 [INFO] 17_inner_repeat_sensitivity: Stage 17 complete.

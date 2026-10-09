@@ -1,0 +1,34 @@
+2026-09-17 16:01:06,734 [INFO] 06_cluster_evaluation: Fitting benchmark Cox model: cluster_only
+2026-09-17 16:01:06,897 [INFO] 06_cluster_evaluation: Fitting benchmark Cox model: clinical_only
+2026-09-17 16:01:07,157 [INFO] 06_cluster_evaluation: Fitting benchmark Cox model: pam50_only
+2026-09-17 16:01:07,314 [INFO] 06_cluster_evaluation: Fitting benchmark Cox model: cluster_plus_clinical
+2026-09-17 16:01:07,575 [INFO] 06_cluster_evaluation: Survival performance (test set):
+                model  c_index  auc_60m  auc_120m  auc_180m
+         cluster_only 0.560717 0.582868  0.598246  0.584919
+        clinical_only 0.669476 0.687825  0.730499  0.739671
+           pam50_only 0.563190 0.585575  0.581849  0.575817
+cluster_plus_clinical 0.668965 0.686252  0.733690  0.744758
+2026-09-17 16:01:07,576 [INFO] 06_cluster_evaluation: Stability run 1/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:02:56,761 [INFO] 06_cluster_evaluation: Stability run 1: ARI = 0.6227
+2026-09-17 16:02:56,761 [INFO] 06_cluster_evaluation: Stability run 2/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:05:43,421 [INFO] 06_cluster_evaluation: Stability run 2: ARI = 0.7608
+2026-09-17 16:05:43,422 [INFO] 06_cluster_evaluation: Stability run 3/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:08:20,976 [INFO] 06_cluster_evaluation: Stability run 3: ARI = 0.9375
+2026-09-17 16:08:20,976 [INFO] 06_cluster_evaluation: Stability run 4/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:10:07,814 [INFO] 06_cluster_evaluation: Stability run 4: ARI = 0.6273
+2026-09-17 16:10:07,814 [INFO] 06_cluster_evaluation: Stability run 5/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:11:40,942 [INFO] 06_cluster_evaluation: Stability run 5: ARI = 0.8069
+2026-09-17 16:11:40,942 [INFO] 06_cluster_evaluation: Stability run 6/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:13:29,222 [INFO] 06_cluster_evaluation: Stability run 6: ARI = 0.8901
+2026-09-17 16:13:29,222 [INFO] 06_cluster_evaluation: Stability run 7/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:15:11,651 [INFO] 06_cluster_evaluation: Stability run 7: ARI = 0.8507
+2026-09-17 16:15:11,652 [INFO] 06_cluster_evaluation: Stability run 8/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:16:22,139 [INFO] 06_cluster_evaluation: Stability run 8: ARI = 0.6990
+2026-09-17 16:16:22,139 [INFO] 06_cluster_evaluation: Stability run 9/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:17:46,253 [INFO] 06_cluster_evaluation: Stability run 9: ARI = 0.6273
+2026-09-17 16:17:46,253 [INFO] 06_cluster_evaluation: Stability run 10/10: refitting MOFA+k-means on 1041 subsampled train patients
+2026-09-17 16:18:59,682 [INFO] 06_cluster_evaluation: Stability run 10: ARI = 0.6779
+2026-09-17 16:18:59,684 [INFO] 06_cluster_evaluation: Mean ARI across 10 subsamples: 0.7500 (acceptance threshold: 0.50) -> PASS
+2026-09-17 16:18:59,744 [INFO] 06_cluster_evaluation: Describing per-cluster pathway activity (mRNA + CNA views; standardised mean differences) ...
+2026-09-17 16:19:00,330 [INFO] 06_cluster_evaluation: Describing recurrent mutation frequencies per cluster ...
+2026-09-17 16:19:00,412 [INFO] 06_cluster_evaluation: Stage 06 complete.

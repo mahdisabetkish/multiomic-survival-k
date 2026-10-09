@@ -1,0 +1,7 @@
+# downloaded and intermediate data (recreated by scripts/01_download_data.py and the stages)
+data/raw/
+data/processed/
+# Python environment and caches
+envs/venv/
+__pycache__/
+*.pyc

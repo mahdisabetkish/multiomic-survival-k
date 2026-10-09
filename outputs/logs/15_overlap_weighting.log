@@ -1,0 +1,6 @@
+2026-10-02 10:59:57,031 [INFO] 15_overlap_weighting: Cohort: n=980, treated=82. Propensity range [0.001, 0.863]
+2026-10-02 10:59:57,889 [INFO] 15_overlap_weighting: IPTW (stabilised, trimmed)       max|SMD|=0.467  mean|SMD|=0.192  above 0.1: 6/11  n=980 (treated 82)  LRT p=0.381
+2026-10-02 10:59:58,557 [INFO] 15_overlap_weighting: Overlap                          max|SMD|=0.149  mean|SMD|=0.033  above 0.1: 1/11  n=980 (treated 82)  LRT p=0.610
+2026-10-02 10:59:58,812 [INFO] 15_overlap_weighting: 1:1 matched (0.2 SD calliper)    max|SMD|=0.208  mean|SMD|=0.104  above 0.1: 6/11  n=148 (treated 74)  LRT p=0.825
+2026-10-02 10:59:58,814 [INFO] 15_overlap_weighting: Unweighted                       max|SMD|=0.907  above 0.1: 9/11
+2026-10-02 10:59:58,821 [INFO] 15_overlap_weighting: Stage 15 complete.

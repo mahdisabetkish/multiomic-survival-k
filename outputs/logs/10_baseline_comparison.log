@@ -1,0 +1,12 @@
+2026-08-07 17:52:03,936 [INFO] 10_baseline_comparison: SAMOC: C-index=0.5607, logrank_p=0.004678
+2026-08-07 17:52:06,190 [INFO] 10_baseline_comparison: Vanilla MOFA+kmeans: k=2, C-index=0.5588, logrank_p=0.001952
+2026-08-07 17:52:34,934 [INFO] 10_baseline_comparison: SNF: C-index=0.5364, logrank_p=0.03231
+2026-08-07 17:52:35,925 [INFO] 10_baseline_comparison: NEMO-repro: C-index=0.5651, logrank_p=0.07902
+2026-08-07 17:52:37,593 [INFO] 10_baseline_comparison: CIMLR-repro: C-index=0.5335, logrank_p=0.1425
+2026-08-07 17:52:38,435 [INFO] 10_baseline_comparison: iClusterPlus-repro: C-index=0.5346, logrank_p=0.1318
+2026-08-07 17:52:49,237 [INFO] 10_baseline_comparison: Bootstrap SAMOC vs Standard MOFA + k-means: delta C-index=0.0019 [-0.0302, 0.0326], p=0.899
+2026-08-07 17:53:00,523 [INFO] 10_baseline_comparison: Bootstrap SAMOC vs SNF: delta C-index=0.0242 [-0.0076, 0.0565], p=0.142
+2026-08-07 17:53:11,707 [INFO] 10_baseline_comparison: Bootstrap SAMOC vs NEMO-repro: delta C-index=-0.0045 [-0.0334, 0.0256], p=0.764
+2026-08-07 17:53:22,957 [INFO] 10_baseline_comparison: Bootstrap SAMOC vs CIMLR-repro: delta C-index=0.0276 [-0.0069, 0.0619], p=0.11
+2026-08-07 17:53:34,306 [INFO] 10_baseline_comparison: Bootstrap SAMOC vs iClusterPlus-repro: delta C-index=0.0257 [-0.0082, 0.0601], p=0.137
+2026-08-07 17:53:34,308 [INFO] 10_baseline_comparison: Stage 10 complete.

@@ -1,0 +1,69 @@
+2026-09-17 16:03:27,558 [INFO] 07_causal_treatment_effects: Deriving out-of-fold cluster labels on the training set (5 folds) ...
+2026-09-17 16:04:15,957 [INFO] 07_causal_treatment_effects: OOF fold 1/5: k*=8 (scores {2: 0.705, 3: 0.45, 4: 0.399, 5: 1.284, 6: 0.731, 7: 1.004, 8: 1.344}); k differs from reference, fold clusters mapped to nearest reference centroid
+2026-09-17 16:04:51,972 [INFO] 07_causal_treatment_effects: OOF fold 2/5: k*=6 (scores {2: 0.38, 3: 0.97, 4: 0.556, 5: 1.011, 6: 1.388, 7: 0.481, 8: 0.661}); k differs from reference, fold clusters mapped to nearest reference centroid
+2026-09-17 16:05:25,463 [INFO] 07_causal_treatment_effects: OOF fold 3/5: k*=5 (scores {2: 1.051, 3: 0.78, 4: 0.639, 5: 1.192, 6: 0.737, 7: 0.483, 8: 0.807}); k differs from reference, fold clusters mapped to nearest reference centroid
+2026-09-17 16:05:54,465 [INFO] 07_causal_treatment_effects: OOF fold 4/5: k*=5 (scores {2: 1.388, 3: 0.66, 4: 1.288, 5: 1.414, 6: 1.215, 7: 1.279, 8: 1.002}); k differs from reference, fold clusters mapped to nearest reference centroid
+2026-09-17 16:06:20,889 [INFO] 07_causal_treatment_effects: OOF fold 5/5: k*=8 (scores {2: 0.611, 3: 1.06, 4: 0.858, 5: 1.337, 6: 0.905, 7: 0.716, 8: 1.386}); k differs from reference, fold clusters mapped to nearest reference centroid
+2026-09-17 16:06:20,964 [INFO] 07_causal_treatment_effects: Out-of-fold vs in-sample training labels: ARI=0.579, exact agreement=82.1%; OOF sizes={0: 269, 1: 278, 2: 440, 3: 315}
+2026-09-17 16:06:20,990 [INFO] 07_causal_treatment_effects: Causal cohort (ER_IHC=Positve, train split): n=980
+2026-09-17 16:06:20,996 [INFO] 07_causal_treatment_effects: === Causal analysis (out-of-fold labels): n=980, treated=82, clusters={0: 112, 1: 232, 2: 356, 3: 280} ===
+2026-09-17 16:06:22,722 [INFO] 07_causal_treatment_effects: Propensity score range: [0.001, 0.863]; weight range after trim: [0.119, 2.322]
+2026-09-17 16:06:22,735 [INFO] 07_causal_treatment_effects: Covariate balance (max |SMD|): before=0.907, after=0.467
+2026-09-17 16:06:22,738 [INFO] 07_causal_treatment_effects: Covariate balance table:
+                    covariate  smd_before_weighting  smd_after_weighting
+             AGE_AT_DIAGNOSIS             -0.906974            -0.075579
+                        GRADE              0.495530             0.238504
+                   TUMOR_SIZE              0.421820             0.052767
+                  TUMOR_STAGE              0.685464             0.462329
+LYMPH_NODES_EXAMINED_POSITIVE              0.547128             0.363008
+               HER2_SNP6_LOSS             -0.059126            -0.023400
+            HER2_SNP6_NEUTRAL             -0.133405            -0.096737
+              HER2_SNP6_UNDEF             -0.094544            -0.101348
+INFERRED_MENOPAUSAL_STATE_Pre              0.598386            -0.014815
+          HORMONE_THERAPY_YES              0.631710             0.467401
+            RADIO_THERAPY_YES              0.576899             0.214233
+2026-09-17 16:06:23,935 [INFO] 07_causal_treatment_effects: Effect-modification LRT: stat=3.068, df=3, p=0.3813
+2026-09-17 16:06:23,951 [INFO] 07_causal_treatment_effects: Cluster-specific chemotherapy HRs (IPTW-weighted Cox):
+ cluster  is_reference_cluster  hazard_ratio  ci_lower  ci_upper  p_value  e_value  n_treated  n_control
+       0                  True      1.781619  1.081250  2.935647 0.023416 2.961682         18         94
+       1                 False      2.451173  1.426626  4.211509 0.001168 4.337194         27        205
+       2                 False      1.087586  0.491110  2.408511 0.836023 1.396223         20        336
+       3                 False      1.935124  0.997246  3.755047 0.050956 3.280331         17        263
+2026-09-17 16:06:23,951 [INFO] 07_causal_treatment_effects: Computing jackknife RMST pseudo-observations at horizon=120 months (n=980) ...
+2026-09-17 16:07:10,148 [INFO] 07_causal_treatment_effects: Causal forest CATE (RMST months gained from chemo) by cluster:
+ cluster  cate_rmst_months   ci_lower  ci_upper
+       0        -15.694034 -38.619464  7.231396
+       1         -4.226327 -18.150713  9.698060
+       2          6.868459  -7.265068 21.001985
+       3        -12.604764 -27.875898  2.666371
+2026-09-17 16:07:10,159 [INFO] 07_causal_treatment_effects: === Causal analysis_insample_labels: n=980, treated=82, clusters={0: 72, 1: 288, 2: 317, 3: 303} ===
+2026-09-17 16:07:12,070 [INFO] 07_causal_treatment_effects: Propensity score range: [0.001, 0.859]; weight range after trim: [0.121, 2.371]
+2026-09-17 16:07:12,087 [INFO] 07_causal_treatment_effects: Covariate balance (max |SMD|): before=0.907, after=0.489
+2026-09-17 16:07:12,090 [INFO] 07_causal_treatment_effects: Covariate balance table:
+                    covariate  smd_before_weighting  smd_after_weighting
+             AGE_AT_DIAGNOSIS             -0.906974            -0.057411
+                        GRADE              0.495530             0.236821
+                   TUMOR_SIZE              0.421820             0.069213
+                  TUMOR_STAGE              0.685464             0.489447
+LYMPH_NODES_EXAMINED_POSITIVE              0.547128             0.385513
+               HER2_SNP6_LOSS             -0.059126            -0.038097
+            HER2_SNP6_NEUTRAL             -0.133405            -0.095005
+              HER2_SNP6_UNDEF             -0.094544            -0.101043
+INFERRED_MENOPAUSAL_STATE_Pre              0.598386            -0.026758
+          HORMONE_THERAPY_YES              0.631710             0.459356
+            RADIO_THERAPY_YES              0.576899             0.207633
+2026-09-17 16:07:13,152 [INFO] 07_causal_treatment_effects: Effect-modification LRT: stat=2.186, df=3, p=0.5347
+2026-09-17 16:07:13,166 [INFO] 07_causal_treatment_effects: Cluster-specific chemotherapy HRs (IPTW-weighted Cox):
+ cluster  is_reference_cluster  hazard_ratio  ci_lower  ci_upper  p_value  e_value  n_treated  n_control
+       0                  True      1.775117  1.070274  2.944144 0.026209 2.948115         15         57
+       1                 False      2.214187  1.321994  3.708506 0.002521 3.853832         30        258
+       2                 False      1.106605  0.471975  2.594575 0.815765 1.450071         20        297
+       3                 False      2.022469  1.084411  3.771982 0.026772 3.460492         17        286
+2026-09-17 16:07:13,167 [INFO] 07_causal_treatment_effects: Computing jackknife RMST pseudo-observations at horizon=120 months (n=980) ...
+2026-09-17 16:08:00,937 [INFO] 07_causal_treatment_effects: Causal forest CATE (RMST months gained from chemo) by cluster:
+ cluster  cate_rmst_months   ci_lower  ci_upper
+       0        -18.976690 -43.080111  5.126731
+       1         -2.055886 -15.913617 11.801844
+       2          3.851000  -6.091808 13.793809
+       3        -12.203964 -28.127732  3.719804
+2026-09-17 16:08:00,943 [INFO] 07_causal_treatment_effects: Stage 07 complete.

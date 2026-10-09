@@ -1,0 +1,9 @@
+2026-10-03 16:57:13,342 [INFO] 21_logrank_null_calibration: k= 2 (groups of 163): mean -log10 p 0.439 (SE 0.021), P(p<0.05) 0.062
+2026-10-03 16:57:54,468 [INFO] 21_logrank_null_calibration: k= 4 (groups of  81): mean -log10 p 0.444 (SE 0.019), P(p<0.05) 0.048
+2026-10-03 16:58:51,683 [INFO] 21_logrank_null_calibration: k= 6 (groups of  54): mean -log10 p 0.461 (SE 0.022), P(p<0.05) 0.060
+2026-10-03 17:00:07,277 [INFO] 21_logrank_null_calibration: k= 8 (groups of  40): mean -log10 p 0.469 (SE 0.022), P(p<0.05) 0.072
+2026-10-03 17:01:30,272 [INFO] 21_logrank_null_calibration: k=10 (groups of  32): mean -log10 p 0.497 (SE 0.022), P(p<0.05) 0.082
+2026-10-03 17:02:46,966 [INFO] 21_logrank_null_calibration: k=12 (groups of  27): mean -log10 p 0.483 (SE 0.020), P(p<0.05) 0.058
+2026-10-03 17:04:32,598 [INFO] 21_logrank_null_calibration: k=15 (groups of  21): mean -log10 p 0.486 (SE 0.021), P(p<0.05) 0.064
+2026-10-03 17:04:32,607 [INFO] 21_logrank_null_calibration: Nominal values for a valid test: mean -log10 p 0.434, P(p<0.05) 0.050
+2026-10-03 17:04:32,607 [INFO] 21_logrank_null_calibration: Stage 21 complete.

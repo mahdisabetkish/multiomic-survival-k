@@ -1,0 +1,27 @@
+2026-10-03 14:50:45,183 [INFO] 16_positive_control: signal=0.0 rep 1: k_surv=8 k_sil=2 | C-index 0.495 vs 0.534 | ARI to signal groups 0.320 vs -0.002
+2026-10-03 14:51:33,371 [INFO] 16_positive_control: signal=0.0 rep 2: k_surv=4 k_sil=2 | C-index 0.485 vs 0.515 | ARI to signal groups 0.165 vs -0.002
+2026-10-03 14:52:13,010 [INFO] 16_positive_control: signal=0.0 rep 3: k_surv=6 k_sil=2 | C-index 0.511 vs 0.512 | ARI to signal groups 0.287 vs 0.001
+2026-10-03 14:52:53,286 [INFO] 16_positive_control: signal=0.0 rep 4: k_surv=8 k_sil=2 | C-index 0.486 vs 0.488 | ARI to signal groups 0.387 vs 0.003
+2026-10-03 14:53:32,686 [INFO] 16_positive_control: signal=0.0 rep 5: k_surv=5 k_sil=2 | C-index 0.494 vs 0.517 | ARI to signal groups 0.196 vs -0.001
+2026-10-03 14:54:14,244 [INFO] 16_positive_control: signal=0.4 rep 1: k_surv=8 k_sil=2 | C-index 0.578 vs 0.508 | ARI to signal groups 0.348 vs 0.002
+2026-10-03 14:54:59,880 [INFO] 16_positive_control: signal=0.4 rep 2: k_surv=6 k_sil=2 | C-index 0.565 vs 0.503 | ARI to signal groups 0.302 vs -0.002
+2026-10-03 14:55:39,346 [INFO] 16_positive_control: signal=0.4 rep 3: k_surv=8 k_sil=2 | C-index 0.580 vs 0.499 | ARI to signal groups 0.306 vs -0.002
+2026-10-03 14:56:20,016 [INFO] 16_positive_control: signal=0.4 rep 4: k_surv=8 k_sil=2 | C-index 0.578 vs 0.504 | ARI to signal groups 0.342 vs 0.002
+2026-10-03 14:56:57,419 [INFO] 16_positive_control: signal=0.4 rep 5: k_surv=8 k_sil=2 | C-index 0.600 vs 0.537 | ARI to signal groups 0.346 vs 0.000
+2026-10-03 14:57:36,528 [INFO] 16_positive_control: signal=0.8 rep 1: k_surv=8 k_sil=2 | C-index 0.665 vs 0.504 | ARI to signal groups 0.313 vs -0.001
+2026-10-03 14:58:17,252 [INFO] 16_positive_control: signal=0.8 rep 2: k_surv=8 k_sil=2 | C-index 0.666 vs 0.520 | ARI to signal groups 0.357 vs -0.002
+2026-10-03 14:58:56,072 [INFO] 16_positive_control: signal=0.8 rep 3: k_surv=8 k_sil=2 | C-index 0.681 vs 0.507 | ARI to signal groups 0.355 vs -0.001
+2026-10-03 14:59:36,312 [INFO] 16_positive_control: signal=0.8 rep 4: k_surv=8 k_sil=2 | C-index 0.655 vs 0.505 | ARI to signal groups 0.370 vs -0.000
+2026-10-03 15:00:13,540 [INFO] 16_positive_control: signal=0.8 rep 5: k_surv=8 k_sil=2 | C-index 0.637 vs 0.500 | ARI to signal groups 0.322 vs -0.000
+2026-10-03 15:00:53,860 [INFO] 16_positive_control: signal=1.6 rep 1: k_surv=8 k_sil=2 | C-index 0.726 vs 0.463 | ARI to signal groups 0.331 vs 0.006
+2026-10-03 15:01:34,052 [INFO] 16_positive_control: signal=1.6 rep 2: k_surv=8 k_sil=2 | C-index 0.693 vs 0.512 | ARI to signal groups 0.354 vs -0.002
+2026-10-03 15:02:14,424 [INFO] 16_positive_control: signal=1.6 rep 3: k_surv=8 k_sil=2 | C-index 0.730 vs 0.483 | ARI to signal groups 0.359 vs 0.002
+2026-10-03 15:02:44,524 [INFO] 16_positive_control: signal=1.6 rep 4: k_surv=8 k_sil=2 | C-index 0.746 vs 0.528 | ARI to signal groups 0.342 vs 0.012
+2026-10-03 15:03:23,099 [INFO] 16_positive_control: signal=1.6 rep 5: k_surv=8 k_sil=2 | C-index 0.762 vs 0.515 | ARI to signal groups 0.330 vs -0.002
+2026-10-03 15:03:23,103 [INFO] 16_positive_control: 
+2026-10-03 15:03:23,103 [INFO] 16_positive_control: signal   k survival       k silhouette     C-index surv     C-index silh    
+2026-10-03 15:03:23,104 [INFO] 16_positive_control: 0.0      [4, 5, 6, 8, 8]  [2, 2, 2, 2, 2]  0.494            0.513           
+2026-10-03 15:03:23,104 [INFO] 16_positive_control: 0.4      [6, 8, 8, 8, 8]  [2, 2, 2, 2, 2]  0.580            0.510           
+2026-10-03 15:03:23,105 [INFO] 16_positive_control: 0.8      [8, 8, 8, 8, 8]  [2, 2, 2, 2, 2]  0.661            0.507           
+2026-10-03 15:03:23,105 [INFO] 16_positive_control: 1.6      [8, 8, 8, 8, 8]  [2, 2, 2, 2, 2]  0.731            0.500           
+2026-10-03 15:03:23,105 [INFO] 16_positive_control: Stage 16 complete.

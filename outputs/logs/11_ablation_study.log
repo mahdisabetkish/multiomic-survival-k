@@ -1,0 +1,16 @@
+2026-08-07 18:37:54,992 [INFO] 11_ablation_study: Full SAMOC: C-index=0.5607, logrank_p=0.004678
+2026-08-07 18:37:57,170 [INFO] 11_ablation_study: No-survival-aware: k=2, C-index=0.5588, logrank_p=0.001952
+2026-08-07 18:41:28,746 [INFO] 11_ablation_study: [no-MOFA] k search: [(2, 1.020129201444923), (3, 1.012031357216518), (4, 1.5269199237547062), (5, 0.5977757875367097), (6, 0.8011095516537827), (7, 0.9217262336602194), (8, 1.4370062166842905)] -> k*=4
+2026-08-07 18:41:37,346 [INFO] 11_ablation_study: No-MOFA: k=4, C-index=0.5342, logrank_p=0.1362
+2026-08-07 18:41:37,346 [INFO] 11_ablation_study: Building raw high-variance gene views (no ssGSEA/arm-burden aggregation) ...
+2026-08-07 18:41:51,079 [INFO] 11_ablation_study: Fitting MOFA on raw high-variance gene views ...
+2026-08-07 18:54:23,970 [INFO] 11_ablation_study: No-pathway-aggregation MOFA retained 13 factors
+2026-08-07 18:54:30,861 [INFO] 11_ablation_study: [no-pathway-agg] k search: [(2, 1.1717415647021336), (3, 0.4781450830191673), (4, 0.7928044198128744), (5, 0.7609072779691235), (6, 0.651659344046873), (7, 1.4524329216662515), (8, 1.224233970103121)] -> k*=7
+2026-08-07 18:54:31,302 [INFO] 11_ablation_study: No-pathway-aggregation: k=7, C-index=0.5236, logrank_p=0.02553
+2026-08-07 18:54:31,355 [INFO] 11_ablation_study: Ablation study:
+                                                                       variant  k  c_index_test  logrank_p_test
+                           Full SAMOC (pathway agg. + MOFA + survival-aware k)  4      0.560717        0.004678
+                                 No survival-aware clustering (unsupervised k)  2      0.558795        0.001952
+                No MOFA (raw concatenated pathway features + survival-aware k)  4      0.534245        0.136210
+No pathway aggregation (raw top-2000-variance genes + MOFA + survival-aware k)  7      0.523566        0.025532
+2026-08-07 18:54:31,355 [INFO] 11_ablation_study: Stage 11 complete.

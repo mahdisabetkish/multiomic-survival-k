@@ -1,0 +1,7 @@
+method,k,c_index,logrank_p,is_reimplementation,notes
+SAMOC (this paper),4,0.5607167387551282,0.004678256321714476,False,"survival-aware MOFA clustering, real"
+Standard MOFA + k-means (unsupervised k),2,0.5587954110898662,0.001951749502593749,False,"k chosen by silhouette (scores={2: 0.1629113291281061, 3: 0.10580467801298012, 4: 0.0961727734899431, 5: 0.09267475246307005, 6: 0.09823542286112646, 7: 0.10283420741316626, 8: 0.10250241491595577})"
+SNF (Wang et al. 2014),4,0.5363984852141306,0.03230887331141859,False,"real snfpy package, spectral clustering, k matched to SAMOC"
+NEMO-repro (Rappoport & Shamir 2019),4,0.5650791735506506,0.0790199859697365,True,"python reimplementation: self-tuned per-view affinity, unweighted average, spectral clustering"
+CIMLR-repro (Ramazzotti et al. 2018),4,0.5334979301639161,0.14253519174091628,True,"python reimplementation: multi-kernel per-view affinity averaging, spectral clustering"
+iClusterPlus-repro (Shen et al. 2009/2012),4,0.5346488704078413,0.13184501052413375,True,"python reimplementation: concatenated joint PCA (no lasso/EM), k-means"

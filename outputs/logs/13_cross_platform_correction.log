@@ -1,0 +1,11 @@
+2026-08-07 19:10:17,825 [INFO] 13_cross_platform_correction: view_mrna_pathway: mean|d| 3.335 -> 0.001 after ComBat (305 features)
+2026-08-07 19:10:18,071 [INFO] 13_cross_platform_correction: view_cna_pathway: mean|d| 0.134 -> 0.020 after ComBat (391 features)
+2026-08-07 19:12:09,109 [INFO] 13_cross_platform_correction: Harmonized-model MOFA retained 11 factors
+2026-08-07 19:12:15,996 [INFO] 13_cross_platform_correction: Harmonized k search: [(2, 1.0025211456234442), (3, 1.0369947479441548), (4, 0.9508762872530522), (5, 0.774752902937459), (6, 1.1168268256871092), (7, 1.353670207545724), (8, 1.8542910123706082)] -> k*=8
+2026-08-07 19:12:16,421 [INFO] 13_cross_platform_correction: Cross-platform correction comparison:
+                               metric  before_combat  after_combat
+                                    k       4.000000      8.000000
+                            logrank_p       0.204826      0.771775
+                              c_index       0.573511      0.525492
+max_cluster_proportion_shift_vs_train       0.366610      0.046860
+2026-08-07 19:12:16,422 [INFO] 13_cross_platform_correction: Stage 13 complete.

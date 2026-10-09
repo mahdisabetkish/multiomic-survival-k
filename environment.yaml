@@ -1,0 +1,41 @@
+# =============================================================================
+# Computational environment for the survival-aware multi-omic clustering /
+# treatment-heterogeneity pipeline.
+#
+# NOTE: not exported from conda. The target execution host had neither conda nor R
+# installed, so by design this pipeline is implemented as a pure-Python stack
+# using package equivalents of the R tools named in the study protocol
+# (MOFA2 -> mofapy2, grf causal survival forest -> EconML CausalForestDML
+# on an RMST-transformed outcome). This file is still expressed as a conda
+# environment spec so it can be recreated with `conda env create -f
+# environment.yaml` on a machine that does have conda; on this machine it was
+# realised as the equivalent `envs/venv` pip virtualenv instead
+# (see envs/requirements.txt for the exact pinned versions actually installed).
+# =============================================================================
+name: metabric-survival-omics
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pyyaml
+  - statsmodels
+  - tqdm
+  - openpyxl
+  - pyarrow              # parquet I/O for intermediate processed tables
+  - graphviz              # workflow diagram (also requires the system `dot` binary)
+  - pip:
+      - lifelines            # Kaplan-Meier, Cox PH, concordance index
+      - scikit-survival       # time-dependent AUC, structured survival arrays
+      - gseapy                 # ssGSEA + Enrichr-mirrored Hallmark/KEGG/Reactome gene sets
+      - mofapy2                 # MOFA multi-omic factor analysis (CPU)
+      - econml                   # CausalForestDML for heterogeneous treatment effects
+      - snfpy                     # Similarity Network Fusion baseline (stage 10)
+      - pycombat                   # ComBat batch correction (stage 13)

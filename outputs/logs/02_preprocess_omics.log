@@ -1,0 +1,12 @@
+2026-08-07 13:11:25,355 [INFO] 02_preprocess_omics: Loading clinical data from data/raw/metabric
+2026-08-07 13:11:25,401 [INFO] 02_preprocess_omics: Loaded clinical for 2509 patients
+2026-08-07 13:11:25,402 [INFO] 02_preprocess_omics: Loading mRNA microarray matrix
+2026-08-07 13:11:50,065 [INFO] 02_preprocess_omics: mRNA matrix: 1980 samples x 20385 genes
+2026-08-07 13:11:50,065 [INFO] 02_preprocess_omics: Loading CNA matrix
+2026-08-07 13:12:07,205 [INFO] 02_preprocess_omics: CNA matrix: 2173 samples x 22542 genes
+2026-08-07 13:12:07,238 [INFO] 02_preprocess_omics: Analysis cohort after QC: 1860 patients
+2026-08-07 13:12:07,963 [INFO] 02_preprocess_omics: Building functional mutation binary matrix
+2026-08-07 13:12:08,056 [INFO] 02_preprocess_omics: Mutation matrix: 1860 patients x 173 genes with >=1 mutation
+2026-08-07 13:12:08,071 [INFO] 02_preprocess_omics: Performing leakage-free stratified train/test split (test_fraction=0.30)
+2026-08-07 13:12:08,117 [INFO] 02_preprocess_omics: Split sizes: train=1302, test=558
+2026-08-07 13:12:22,638 [INFO] 02_preprocess_omics: Stage 02 complete. Outputs written to data/processed/metabric

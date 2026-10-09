@@ -1,0 +1,20 @@
+2026-10-03 16:19:36,807 [INFO] 19_positive_control_k_range: signal=0.0 rep 1: k_surv=8 (runner-up 14) k_sil=2 | C-index 0.495 | ARI to signal 0.320, nuisance 0.251, 8-cell product 0.601
+2026-10-03 16:20:39,754 [INFO] 19_positive_control_k_range: signal=0.0 rep 2: k_surv=15 (runner-up 11) k_sil=2 | C-index 0.496 | ARI to signal 0.198, nuisance 0.143, 8-cell product 0.417
+2026-10-03 16:21:31,873 [INFO] 19_positive_control_k_range: signal=0.0 rep 3: k_surv=12 (runner-up 11) k_sil=2 | C-index 0.508 | ARI to signal 0.209, nuisance 0.169, 8-cell product 0.436
+2026-10-03 16:22:24,635 [INFO] 19_positive_control_k_range: signal=0.0 rep 4: k_surv=15 (runner-up 14) k_sil=2 | C-index 0.490 | ARI to signal 0.222, nuisance 0.144, 8-cell product 0.454
+2026-10-03 16:23:14,582 [INFO] 19_positive_control_k_range: signal=0.0 rep 5: k_surv=13 (runner-up 5) k_sil=2 | C-index 0.492 | ARI to signal 0.207, nuisance 0.159, 8-cell product 0.434
+2026-10-03 16:24:05,756 [INFO] 19_positive_control_k_range: signal=0.8 rep 1: k_surv=10 (runner-up 8) k_sil=2 | C-index 0.652 | ARI to signal 0.234, nuisance 0.203, 8-cell product 0.476
+2026-10-03 16:24:56,581 [INFO] 19_positive_control_k_range: signal=0.8 rep 2: k_surv=8 (runner-up 11) k_sil=2 | C-index 0.666 | ARI to signal 0.357, nuisance 0.248, 8-cell product 0.655
+2026-10-03 16:25:48,733 [INFO] 19_positive_control_k_range: signal=0.8 rep 3: k_surv=12 (runner-up 13) k_sil=2 | C-index 0.663 | ARI to signal 0.244, nuisance 0.173, 8-cell product 0.489
+2026-10-03 16:26:39,192 [INFO] 19_positive_control_k_range: signal=0.8 rep 4: k_surv=8 (runner-up 9) k_sil=2 | C-index 0.655 | ARI to signal 0.370, nuisance 0.249, 8-cell product 0.672
+2026-10-03 16:27:29,301 [INFO] 19_positive_control_k_range: signal=0.8 rep 5: k_surv=15 (runner-up 9) k_sil=2 | C-index 0.629 | ARI to signal 0.168, nuisance 0.137, 8-cell product 0.368
+2026-10-03 16:28:20,691 [INFO] 19_positive_control_k_range: signal=1.6 rep 1: k_surv=15 (runner-up 8) k_sil=2 | C-index 0.677 | ARI to signal 0.190, nuisance 0.142, 8-cell product 0.401
+2026-10-03 16:29:16,791 [INFO] 19_positive_control_k_range: signal=1.6 rep 2: k_surv=12 (runner-up 10) k_sil=2 | C-index 0.701 | ARI to signal 0.249, nuisance 0.172, 8-cell product 0.500
+2026-10-03 16:30:08,232 [INFO] 19_positive_control_k_range: signal=1.6 rep 3: k_surv=12 (runner-up 15) k_sil=2 | C-index 0.709 | ARI to signal 0.256, nuisance 0.177, 8-cell product 0.508
+2026-10-03 16:30:49,691 [INFO] 19_positive_control_k_range: signal=1.6 rep 4: k_surv=11 (runner-up 12) k_sil=2 | C-index 0.751 | ARI to signal 0.283, nuisance 0.194, 8-cell product 0.542
+2026-10-03 16:31:38,362 [INFO] 19_positive_control_k_range: signal=1.6 rep 5: k_surv=8 (runner-up 10) k_sil=2 | C-index 0.762 | ARI to signal 0.330, nuisance 0.250, 8-cell product 0.617
+2026-10-03 16:31:38,365 [INFO] 19_positive_control_k_range: 
+2026-10-03 16:31:38,366 [INFO] 19_positive_control_k_range: signal 0.0: k chosen [8, 12, 13, 15, 15] (search up to 15) | mean C-index 0.496 | mean ARI to product cells 0.468
+2026-10-03 16:31:38,366 [INFO] 19_positive_control_k_range: signal 0.8: k chosen [8, 8, 10, 12, 15] (search up to 15) | mean C-index 0.653 | mean ARI to product cells 0.532
+2026-10-03 16:31:38,367 [INFO] 19_positive_control_k_range: signal 1.6: k chosen [8, 11, 12, 12, 15] (search up to 15) | mean C-index 0.720 | mean ARI to product cells 0.513
+2026-10-03 16:31:38,367 [INFO] 19_positive_control_k_range: Stage 19 complete.

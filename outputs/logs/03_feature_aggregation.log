@@ -1,0 +1,23 @@
+2026-08-07 13:27:40,213 [INFO] 03_feature_aggregation: mRNA genes retained after train-fit variance filter: 10193 / 20385
+2026-08-07 13:27:40,217 [INFO] 03_feature_aggregation: Gene set 'hallmark': 50 raw terms -> 50 after size filter/subsample
+2026-08-07 13:27:40,221 [INFO] 03_feature_aggregation: Gene set 'kegg': 320 raw terms -> 150 after size filter/subsample
+2026-08-07 13:27:40,239 [INFO] 03_feature_aggregation: Gene set 'reactome': 1816 raw terms -> 150 after size filter/subsample
+2026-08-07 13:27:40,241 [INFO] 03_feature_aggregation: Total combined gene sets for ssGSEA/CNA pathway scoring: 350
+2026-08-07 13:27:40,242 [INFO] 03_feature_aggregation: Running ssGSEA on 1860 samples x 10193 genes x 350 gene sets (batch_size=150) ...
+2026-08-07 13:27:46,154 [INFO] 03_feature_aggregation: ssGSEA batch 1/13 complete (150 samples)
+2026-08-07 13:27:52,094 [INFO] 03_feature_aggregation: ssGSEA batch 2/13 complete (150 samples)
+2026-08-07 13:27:57,690 [INFO] 03_feature_aggregation: ssGSEA batch 3/13 complete (150 samples)
+2026-08-07 13:28:03,082 [INFO] 03_feature_aggregation: ssGSEA batch 4/13 complete (150 samples)
+2026-08-07 13:28:08,294 [INFO] 03_feature_aggregation: ssGSEA batch 5/13 complete (150 samples)
+2026-08-07 13:28:13,492 [INFO] 03_feature_aggregation: ssGSEA batch 6/13 complete (150 samples)
+2026-08-07 13:28:18,630 [INFO] 03_feature_aggregation: ssGSEA batch 7/13 complete (150 samples)
+2026-08-07 13:28:23,779 [INFO] 03_feature_aggregation: ssGSEA batch 8/13 complete (150 samples)
+2026-08-07 13:28:28,912 [INFO] 03_feature_aggregation: ssGSEA batch 9/13 complete (150 samples)
+2026-08-07 13:28:34,192 [INFO] 03_feature_aggregation: ssGSEA batch 10/13 complete (150 samples)
+2026-08-07 13:28:40,255 [INFO] 03_feature_aggregation: ssGSEA batch 11/13 complete (150 samples)
+2026-08-07 13:28:46,003 [INFO] 03_feature_aggregation: ssGSEA batch 12/13 complete (150 samples)
+2026-08-07 13:28:48,194 [INFO] 03_feature_aggregation: ssGSEA batch 13/13 complete (60 samples)
+2026-08-07 13:28:48,201 [INFO] 03_feature_aggregation: mRNA pathway score matrix: (1860, 306)
+2026-08-07 13:28:49,711 [INFO] 03_feature_aggregation: CNA view (arm burden + pathway scores): (1860, 391)
+2026-08-07 13:28:49,716 [INFO] 03_feature_aggregation: Mutation view: (1860, 41) (top-N genes fit on train, N=40)
+2026-08-07 13:28:50,007 [INFO] 03_feature_aggregation: Stage 03 complete. Feature counts: mrna_pathway=306, cna_pathway=391, mutation=41

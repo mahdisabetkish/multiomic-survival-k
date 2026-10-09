@@ -1,0 +1,11 @@
+2026-10-03 16:08:33,188 [INFO] 18_geneset_seed_sensitivity: Seed 101: 350 gene sets
+2026-10-03 16:11:38,164 [INFO] 18_geneset_seed_sensitivity: Seed 101: k=8, test C-index 0.584, log-rank p 0.0000, ARI to reference 0.260
+2026-10-03 16:11:38,266 [INFO] 18_geneset_seed_sensitivity: Seed 202: 350 gene sets
+2026-10-03 16:14:58,794 [INFO] 18_geneset_seed_sensitivity: Seed 202: k=8, test C-index 0.564, log-rank p 0.0523, ARI to reference 0.418
+2026-10-03 16:14:59,057 [INFO] 18_geneset_seed_sensitivity: Seed 303: 350 gene sets
+2026-10-03 16:18:04,010 [INFO] 18_geneset_seed_sensitivity: Seed 303: k=8, test C-index 0.551, log-rank p 0.0325, ARI to reference 0.377
+2026-10-03 16:18:04,114 [INFO] 18_geneset_seed_sensitivity: 
+2026-10-03 16:18:04,114 [INFO] 18_geneset_seed_sensitivity: k selected across draws: [8, 8, 8]
+2026-10-03 16:18:04,115 [INFO] 18_geneset_seed_sensitivity: test C-index: [0.584, 0.564, 0.551] (reference 0.561)
+2026-10-03 16:18:04,115 [INFO] 18_geneset_seed_sensitivity: ARI to the reference partition: [0.26, 0.418, 0.377]
+2026-10-03 16:18:04,115 [INFO] 18_geneset_seed_sensitivity: Stage 18 complete.

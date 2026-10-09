@@ -1,0 +1,3 @@
+view,n_features,mean_abs_cohens_d_before,median_abs_cohens_d_before,pct_features_|d|>0.5_before,mean_abs_cohens_d_after,median_abs_cohens_d_after,pct_features_|d|>0.5_after
+view_mrna_pathway,305,3.334947094533094,2.9521738931207966,91.14754098360656,0.0009665882309227513,0.0008287421078005589,0.0
+view_cna_pathway,391,0.13367194552307646,0.13409713861973183,0.0,0.019693465263446282,0.014905391662197323,0.0

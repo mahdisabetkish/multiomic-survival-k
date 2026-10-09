@@ -1,0 +1,11 @@
+2026-08-07 13:37:28,735 [INFO] 04_mofa_factorisation: View 'mrna_pathway': 306 features, train=1302, test=558
+2026-08-07 13:37:28,753 [INFO] 04_mofa_factorisation: View 'cna_pathway': 391 features, train=1302, test=558
+2026-08-07 13:37:28,758 [INFO] 04_mofa_factorisation: View 'mutation': 41 features, train=1302, test=558
+2026-08-07 13:37:28,782 [INFO] 04_mofa_factorisation: Building and training MOFA model (max_factors=15, dropR2=0.005) ...
+2026-08-07 13:39:26,481 [INFO] 04_mofa_factorisation: MOFA converged with 11 active factors (of 15 initial)
+2026-08-07 13:39:26,708 [INFO] 04_mofa_factorisation: Variance explained per view:
+        view  R2_total
+mrna_pathway  0.617281
+ cna_pathway  0.718029
+    mutation  0.029278
+2026-08-07 13:39:26,714 [INFO] 04_mofa_factorisation: Stage 04 complete. Train factors=(1302, 11), test factors=(558, 11)
